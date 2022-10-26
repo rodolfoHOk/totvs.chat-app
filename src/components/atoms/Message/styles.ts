@@ -10,7 +10,7 @@ export const MessageItem = styled.div<{ author: boolean }>`
   background-color: ${({ author, theme }) =>
     author ? theme.colors.background.author : theme.colors.background.pure};
   border-radius: 10px;
-  box-shadow: 0 1px 1px #ccc;
+  box-shadow: 0 1px 1px ${({ theme }) => theme.colors.text.darkGray};
   display: flex;
   flex-direction: column;
   max-width: 90%;
@@ -24,6 +24,7 @@ export const TextWrapper = styled.div`
 export const Text = styled.p`
   font-size: 0.875rem;
   margin: 0;
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 export const DateWrapper = styled.div`

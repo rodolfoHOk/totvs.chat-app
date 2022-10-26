@@ -33,6 +33,11 @@ export const Input = styled.input`
   outline: 0;
   border-radius: 10px;
   font-size: 0.938rem;
+  background-color: ${({ theme }) => theme.colors.background.pure};
   color: ${({ theme }) => theme.colors.text.darkGray};
   padding-left: 15px;
+
+  ::placeholder {
+    color: ${({ theme }) => theme.colors.text.gray};
+  }
 `;

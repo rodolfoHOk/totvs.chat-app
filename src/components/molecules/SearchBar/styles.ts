@@ -21,4 +21,9 @@ export const Input = styled.input`
   outline: none;
   background-color: transparent;
   margin-left: 12px;
+  color: ${({ theme }) => theme.colors.text.primary};
+
+  ::placeholder {
+    color: ${({ theme }) => theme.colors.text.gray};
+  }
 `;

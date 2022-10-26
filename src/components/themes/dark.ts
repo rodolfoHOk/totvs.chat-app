@@ -10,7 +10,7 @@ export const DarkTheme: SCDefaultTheme = {
       pure: '#000000',
       chat: '#070605',
       green: '#00bfa5',
-      author: '#dcf8c6',
+      author: '#024211',
     },
     border: {
       primary: '#222222',
@@ -31,5 +31,8 @@ export const DarkTheme: SCDefaultTheme = {
       darkGray: '#b5b5b5',
       invert: '#000000',
     },
+  },
+  background: {
+    image: 'https://i.redd.it/3jfjc53fsyb61.jpg',
   },
 };

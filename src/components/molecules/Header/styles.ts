@@ -19,6 +19,7 @@ export const AvatarWrapper = styled.div`
 
 export const Name = styled.p`
   margin-left: 15px;
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 export const IconWrapper = styled.div`

@@ -33,5 +33,8 @@ declare module 'styled-components' {
         invert: string;
       };
     };
+    background: {
+      image: string;
+    };
   }
 }
