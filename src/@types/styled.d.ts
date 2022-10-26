@@ -11,6 +11,7 @@ declare module 'styled-components' {
         pure: string;
         chat: string;
         green: string;
+        author: string;
       };
       border: {
         primary: string;

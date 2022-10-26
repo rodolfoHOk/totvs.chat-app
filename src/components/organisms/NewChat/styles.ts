@@ -11,6 +11,7 @@ export const Container = styled.div<{ show: boolean }>`
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.background.pure};
   border-right: 1px solid ${({ theme }) => theme.colors.border.primary};
+  transition: all ease 0.3s;
 `;
 
 export const Header = styled.header`

@@ -10,6 +10,7 @@ export const DefaultTheme: SCDefaultTheme = {
       pure: '#ffffff',
       chat: '#f8f9fa',
       green: '#00bfa5',
+      author: '#dcf8c6',
     },
     border: {
       primary: '#dddddd',

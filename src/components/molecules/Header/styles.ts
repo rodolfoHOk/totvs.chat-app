@@ -12,6 +12,15 @@ export const ButtonsWrapper = styled.div`
   display: flex;
 `;
 
+export const AvatarWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const Name = styled.p`
+  margin-left: 15px;
+`;
+
 export const IconWrapper = styled.div`
   display: flex;
   justify-content: center;

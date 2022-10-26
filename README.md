@@ -13,8 +13,3 @@
 ### Bibliotecas adicionais
 
 - emoji-picker-react
-
-#### pausa
-
-- https://www.twitch.tv/videos/1634386500
-- 1:34:40

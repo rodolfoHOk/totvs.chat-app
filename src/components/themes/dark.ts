@@ -10,6 +10,7 @@ export const DarkTheme: SCDefaultTheme = {
       pure: '#000000',
       chat: '#070605',
       green: '#00bfa5',
+      author: '#dcf8c6',
     },
     border: {
       primary: '#222222',
