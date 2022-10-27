@@ -1,27 +1,22 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../../store';
+import { getActiveChatsRequest } from '../../../store/reducers/userSlice';
 import { Contact } from '../../molecules/Contact';
 import { Container } from './styles';
 
-const contatos = [
-  { id: 1 },
-  { id: 2 },
-  { id: 3 },
-  { id: 4 },
-  { id: 5 },
-  { id: 6 },
-  { id: 7 },
-  { id: 8 },
-  { id: 9 },
-  { id: 10 },
-  { id: 11 },
-  { id: 12 },
-];
-
 export const ContactList: FC = () => {
+  const dispatch = useDispatch();
+  const { activeChats, id } = useSelector((state: RootState) => state.user);
+
+  useEffect(() => {
+    dispatch(getActiveChatsRequest({ id }));
+  }, []);
+
   return (
     <Container>
-      {contatos.map((contato) => (
-        <Contact key={contato.id} name={`Contato ${contato.id}`} />
+      {activeChats.map((contact) => (
+        <Contact key={contact.id} contact={contact} />
       ))}
     </Container>
   );

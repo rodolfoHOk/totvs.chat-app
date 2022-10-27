@@ -24,6 +24,7 @@ export const DefaultTheme: SCDefaultTheme = {
     icon: {
       primary: '#919191',
       secondary: '#ffffff',
+      green: '#009688',
     },
     text: {
       primary: '#000000',

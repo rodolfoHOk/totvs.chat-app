@@ -1,4 +1,6 @@
+import { format, parseISO } from 'date-fns';
 import { FC } from 'react';
+import { Contact as ContactData } from '../../../store/reducers/contactSlice';
 import { Avatar } from '../../atoms/Avatar';
 import {
   Container,
@@ -11,21 +13,23 @@ import {
 } from './styles';
 
 interface ContactProps {
-  name: string;
+  contact: ContactData;
 }
 
-export const Contact: FC<ContactProps> = ({ name }) => {
+export const Contact: FC<ContactProps> = ({ contact }) => {
   return (
     <Container>
       <Avatar alt="Avatar do contato" />
       <ContentWrapper>
         <Line>
-          <Name>{name}</Name>
-          <Date>19:00</Date>
+          <Name>{contact.name}</Name>
+          <Date>
+            {format(parseISO(contact.createdAt.toString()), 'dd/MM HH:mm')}
+          </Date>
         </Line>
         <Line>
           <MessageWrapper>
-            <Message>Não irei usar Lorem Ipsum</Message>
+            <Message>{`~${contact.name}`}</Message>
           </MessageWrapper>
         </Line>
       </ContentWrapper>

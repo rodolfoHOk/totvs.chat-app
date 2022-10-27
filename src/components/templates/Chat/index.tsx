@@ -1,10 +1,15 @@
 import { FC } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../store';
 import { ActiveChat } from '../../organisms/ActiveChat';
 import { Intro } from '../../organisms/Intro';
 import { Container } from './styles';
 
-const showIntro = true;
-
 export const Chat: FC = () => {
-  return <Container>{showIntro ? <Intro /> : <ActiveChat />}</Container>;
+  const { id } = useSelector((state: RootState) => state.user);
+  const { activeContact } = useSelector((state: RootState) => state.contact);
+
+  const showActiveChat = id && activeContact;
+
+  return <Container>{showActiveChat ? <ActiveChat /> : <Intro />}</Container>;
 };

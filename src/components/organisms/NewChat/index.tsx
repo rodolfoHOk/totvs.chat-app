@@ -28,6 +28,7 @@ interface NewChatProps {
 export const NewChat: FC<NewChatProps> = ({ show, handleClose }) => {
   const theme = useTheme();
   const dispatch = useDispatch();
+  const userId = useSelector((state: RootState) => state.user.id);
   const contacts = useSelector((state: RootState) => state.contact.data);
 
   const handleNewChat = (contact: Contact) => {
@@ -52,12 +53,14 @@ export const NewChat: FC<NewChatProps> = ({ show, handleClose }) => {
         </TitleWrapper>
       </Header>
       <List>
-        {contacts.map((contact) => (
-          <Item key={contact.id} onClick={() => handleNewChat(contact)}>
-            <Avatar alt="Avatar do contato" />
-            <Name>{contact.name}</Name>
-          </Item>
-        ))}
+        {contacts
+          .filter((contact) => contact.id !== userId)
+          .map((contact) => (
+            <Item key={contact.id} onClick={() => handleNewChat(contact)}>
+              <Avatar alt="Avatar do contato" />
+              <Name>{contact.name}</Name>
+            </Item>
+          ))}
       </List>
     </Container>
   );

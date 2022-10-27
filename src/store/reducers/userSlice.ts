@@ -5,7 +5,7 @@ import { Contact } from './contactSlice';
 interface UserSliceState {
   id: string;
   name: string;
-  activeChats: any[];
+  activeChats: Contact[];
   loading: boolean;
 }
 
@@ -28,9 +28,23 @@ const userSlice = createSlice({
       localStorage.setItem('totvs_chat:user_nome', payload.name);
       return { ...state, loading: false, name: payload.name, id: payload.id };
     },
+    getActiveChatsRequest: (
+      state,
+      { payload }: PayloadAction<{ id: string }>
+    ) => {
+      return { ...state, loading: true };
+    },
+    getActiveChatsSuccess: (state, { payload }: PayloadAction<Contact[]>) => {
+      return { ...state, loading: false, activeChats: payload };
+    },
   },
 });
 
-export const { createUserRequest, createUserSuccess } = userSlice.actions;
+export const {
+  createUserRequest,
+  createUserSuccess,
+  getActiveChatsRequest,
+  getActiveChatsSuccess,
+} = userSlice.actions;
 
 export const user = userSlice.reducer;

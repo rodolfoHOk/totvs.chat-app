@@ -25,6 +25,7 @@ declare module 'styled-components' {
       icon: {
         primary: string;
         secondary: string;
+        green: string;
       };
       text: {
         primary: string;

@@ -1,4 +1,6 @@
+import { format, parseISO } from 'date-fns';
 import { FC } from 'react';
+import { Message as MessageData } from '../../../store/reducers/messageSlice';
 import {
   Container,
   Date,
@@ -8,25 +10,20 @@ import {
   TextWrapper,
 } from './styles';
 
-interface Data {
-  content: string;
-  date: string;
-}
-
 interface MessageProps {
-  data: Data;
-  author?: boolean;
+  message: MessageData;
+  userId: string;
 }
 
-export const Message: FC<MessageProps> = ({ data, author = false }) => {
+export const Message: FC<MessageProps> = ({ message, userId }) => {
   return (
-    <Container author={author}>
-      <MessageItem author={author}>
+    <Container author={userId === message.origin.id}>
+      <MessageItem author={userId === message.origin.id}>
         <TextWrapper>
-          <Text>{data.content}</Text>
+          <Text>{message.content}</Text>
         </TextWrapper>
         <DateWrapper>
-          <Date>{data.date}</Date>
+          <Date>{format(parseISO(message.createdAt.toString()), 'HH:mm')}</Date>
         </DateWrapper>
       </MessageItem>
     </Container>

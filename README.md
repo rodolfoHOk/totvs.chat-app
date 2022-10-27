@@ -10,6 +10,7 @@
 - Material UI Icons
 - Vite Js
 - Redux
+- Redux-Saga
 - Socket.IO
 
 ### Bibliotecas adicionais
@@ -43,9 +44,4 @@
 ## Melhorias a fazer
 
 - usar o react hook form para cadastrar usuário
--
-
-## pausa
-
-- https://www.twitch.tv/videos/1635272162
-- 01:21:22
+- colocar ação quando clicar em um contato da lista

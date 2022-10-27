@@ -10,8 +10,8 @@ export const ButtonsWrapper = styled.div`
   display: flex;
 `;
 
-export const Button = styled.div`
-  width: 40px;
+export const Button = styled.div<{ show: boolean }>`
+  width: ${({ show }) => (show ? '40px' : 0)};
   height: 40px;
   border-radius: 50%;
   display: flex;
