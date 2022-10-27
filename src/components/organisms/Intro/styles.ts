@@ -23,3 +23,39 @@ export const Text = styled.p`
   margin-top: 16px;
   line-height: 1.7;
 `;
+
+export const ContentWrapper = styled.div`
+  text-align: center;
+`;
+
+export const FormWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Input = styled.input`
+  width: 375px;
+  margin: 12px 0;
+  padding: 16px 20px;
+  background-color: ${({ theme }) => theme.colors.background.secondary};
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+`;
+
+export const Button = styled.button`
+  width: 375px;
+  padding: 16px 20px;
+  background-color: ${({ theme }) => theme.colors.border.chat};
+  color: ${({ theme }) => theme.colors.background.pure};
+  font-weight: bold;
+  font-size: 18px;
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+
+  :hover {
+    background-color: ${({ theme }) => theme.colors.background.green};
+  }
+`;

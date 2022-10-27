@@ -42,3 +42,25 @@ export const Title = styled.p`
   margin-top: 16px;
   color: ${({ theme }) => theme.colors.text.invert};
 `;
+
+export const List = styled.div`
+  flex: 1;
+  overflow-y: auto;
+`;
+
+export const Item = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+
+  :hover {
+    background-color: ${({ theme }) => theme.colors.background.hover};
+  }
+`;
+
+export const Name = styled.p`
+  margin-left: 15px;
+  font-size: 1.063rem;
+  color: ${({ theme }) => theme.colors.text.primary};
+`;
