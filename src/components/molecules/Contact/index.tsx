@@ -14,11 +14,12 @@ import {
 
 interface ContactProps {
   contact: ContactData;
+  handleContactClick: (contact: ContactData) => void;
 }
 
-export const Contact: FC<ContactProps> = ({ contact }) => {
+export const Contact: FC<ContactProps> = ({ contact, handleContactClick }) => {
   return (
-    <Container>
+    <Container onClick={() => handleContactClick(contact)}>
       <Avatar alt="Avatar do contato" />
       <ContentWrapper>
         <Line>

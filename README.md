@@ -23,7 +23,7 @@
 - @reduxjs/toolkit
 - socket.io-client
 
-## Redux e Redux-Saga
+## Guia Redux e Redux-Saga
 
 - Criar a store com @reduxjs-toolkit (src/store/index.ts)
 - Criar o primeiro slice com @reduxjs-toolkit (src/store/reducers/contactSlice.ts)
@@ -33,6 +33,8 @@
 - Criar a primeira saga com redux-saga (src/store/saga/contactSaga.ts)
 - Criar o rootSaga com redux-saga e adicionar a primeira saga (src/store/saga/index.ts)
 - Adicionar o saga middleware rootSaga ao store e rodar o saga middleware com o rootSaga (src/store/index.ts)
+- Usar dispatch, com useDispatch, para despachar ações que mudam um estado da store
+- Usar useSelector para buscar um estado na store
 
 ## Links úteis
 
@@ -44,4 +46,3 @@
 ## Melhorias a fazer
 
 - usar o react hook form para cadastrar usuário
-- colocar ação quando clicar em um contato da lista
