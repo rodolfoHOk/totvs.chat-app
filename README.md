@@ -42,7 +42,3 @@
 - https://react-redux.js.org/
 - https://redux-saga.js.org/
 - https://redux-toolkit.js.org/
-
-## Melhorias a fazer
-
-- usar o react hook form para cadastrar usuário

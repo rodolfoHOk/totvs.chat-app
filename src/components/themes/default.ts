@@ -7,7 +7,7 @@ export const DefaultTheme: SCDefaultTheme = {
       primary: '#d2dbdc',
       secondary: '#ededed',
       hover: '#f5f5f5',
-      pure: '#ffffff',
+      pure: '#ededed',
       chat: '#f8f9fa',
       green: '#00bfa5',
       author: '#dcf8c6',

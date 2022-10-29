@@ -38,16 +38,21 @@ export const Input = styled.input`
   margin: 12px 0;
   padding: 16px 20px;
   background-color: ${({ theme }) => theme.colors.background.secondary};
+  color: ${({ theme }) => theme.colors.text.primary};
   outline: 0;
   border: 0;
   border-radius: 8px;
+
+  ::placeholder {
+    color: ${({ theme }) => theme.colors.text.gray};
+  }
 `;
 
 export const Button = styled.button`
   width: 375px;
   padding: 16px 20px;
   background-color: ${({ theme }) => theme.colors.border.chat};
-  color: ${({ theme }) => theme.colors.background.pure};
+  color: ${({ theme }) => theme.colors.text.primary};
   font-weight: bold;
   font-size: 18px;
   outline: 0;

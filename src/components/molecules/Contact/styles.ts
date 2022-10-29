@@ -5,7 +5,8 @@ export const Container = styled.div`
   align-items: center;
   height: 72px;
   padding: 0 16px;
-  background-color: inherit;
+  background-color: ${({ theme }) => theme.colors.background.secondary};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border.primary};
   cursor: pointer;
 
   :hover {
@@ -21,7 +22,6 @@ export const ContentWrapper = styled.div`
   height: 100%;
   margin-left: 16px;
   padding-right: 16px;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.border.primary};
 
   flex-wrap: wrap;
   min-width: 0;

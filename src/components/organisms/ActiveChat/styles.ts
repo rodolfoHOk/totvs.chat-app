@@ -9,6 +9,7 @@ export const Container = styled.div`
 export const ChatBody = styled.div`
   background-size: cover;
   background-position: center;
+  background-color: ${({ theme }) => theme.colors.background.chat};
   background-image: url(${({ theme }) => theme.background.image});
   flex: 1;
   overflow-y: auto;

@@ -6,6 +6,7 @@ export const Container = styled.header`
   align-items: center;
   height: 60px;
   padding: 0 16px;
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 export const ButtonsWrapper = styled.div`

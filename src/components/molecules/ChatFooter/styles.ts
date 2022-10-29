@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   height: 62px;
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 export const ButtonsWrapper = styled.div`
@@ -33,8 +34,8 @@ export const Input = styled.input`
   outline: 0;
   border-radius: 10px;
   font-size: 0.938rem;
-  background-color: ${({ theme }) => theme.colors.background.pure};
-  color: ${({ theme }) => theme.colors.text.darkGray};
+  background-color: ${({ theme }) => theme.colors.background.secondary};
+  color: ${({ theme }) => theme.colors.text.primary};
   padding-left: 15px;
 
   ::placeholder {

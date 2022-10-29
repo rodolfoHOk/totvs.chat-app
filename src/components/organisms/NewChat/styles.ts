@@ -9,7 +9,7 @@ export const Container = styled.div<{ show: boolean }>`
   bottom: 0;
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.colors.background.pure};
+  background-color: ${({ theme }) => theme.colors.background.chat};
   border-right: 1px solid ${({ theme }) => theme.colors.border.primary};
   transition: all ease 0.3s;
 `;
@@ -53,6 +53,7 @@ export const Item = styled.div`
   align-items: center;
   padding: 15px;
   cursor: pointer;
+  background-color: ${({ theme }) => theme.colors.background.secondary};
 
   :hover {
     background-color: ${({ theme }) => theme.colors.background.hover};
