@@ -11,7 +11,7 @@ import { Container } from './styles';
 export const Contacts: FC = () => {
   const dispatch = useDispatch();
   const { theme } = useSelector((state: RootState) => state.theme);
-  const { name } = useSelector((state: RootState) => state.user);
+  const { name, avatarUrl } = useSelector((state: RootState) => state.user);
   const [show, setShow] = useState(false);
 
   const handleChangeTheme = () => dispatch(changeTheme());
@@ -22,6 +22,7 @@ export const Contacts: FC = () => {
       <Header
         handleShow={() => setShow(true)}
         name={name}
+        avatarUrl={avatarUrl}
         theme={theme === 'light' ? 'light' : 'dark'}
         handleChangeTheme={handleChangeTheme}
       />

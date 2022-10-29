@@ -15,6 +15,7 @@ interface HeaderProps {
   handleShow?: () => void;
   showButton?: boolean;
   name?: string;
+  avatarUrl?: string;
   theme?: 'dark' | 'light';
   handleChangeTheme?: () => void;
 }
@@ -23,6 +24,7 @@ export const Header: FC<HeaderProps> = ({
   handleShow,
   showButton = true,
   name = '',
+  avatarUrl = '',
   theme = 'light',
   handleChangeTheme,
 }) => {
@@ -30,11 +32,11 @@ export const Header: FC<HeaderProps> = ({
     <Container>
       {name !== '' ? (
         <AvatarWrapper>
-          <Avatar alt="Avatar do usuário" />
+          <Avatar url={avatarUrl} alt="Avatar do usuário" />
           <Name>{name}</Name>
         </AvatarWrapper>
       ) : (
-        <Avatar alt="Avatar do usuário" />
+        <Avatar url={''} alt="Avatar do usuário" />
       )}
       {showButton && (
         <ButtonsWrapper>

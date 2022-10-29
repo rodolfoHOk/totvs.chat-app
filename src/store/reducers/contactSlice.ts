@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export interface Contact {
   id: string;
   name: string;
+  avatarUrl: string;
   createdAt: Date;
   updatedAt: Date;
 }

@@ -5,6 +5,7 @@ import { Contact } from './contactSlice';
 interface UserSliceState {
   id: string;
   name: string;
+  avatarUrl: string;
   activeChats: Contact[];
   loading: boolean;
 }
@@ -12,6 +13,7 @@ interface UserSliceState {
 const initialState: UserSliceState = {
   id: localStorage.getItem('totvs_chat:user_id') || '',
   name: localStorage.getItem('totvs_chat:user_nome') || '',
+  avatarUrl: localStorage.getItem('totvs_chat:user_avatar') || '',
   activeChats: [],
   loading: false,
 };
@@ -26,6 +28,7 @@ const userSlice = createSlice({
     createUserSuccess: (state, { payload }: PayloadAction<Contact>) => {
       localStorage.setItem('totvs_chat:user_id', payload.id);
       localStorage.setItem('totvs_chat:user_nome', payload.name);
+      localStorage.setItem('totvs_chat:user_avatar', payload.avatarUrl);
       return { ...state, loading: false, name: payload.name, id: payload.id };
     },
     getActiveChatsRequest: (

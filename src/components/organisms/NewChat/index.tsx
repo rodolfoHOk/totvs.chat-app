@@ -57,7 +57,7 @@ export const NewChat: FC<NewChatProps> = ({ show, handleClose }) => {
           .filter((contact) => contact.id !== userId)
           .map((contact) => (
             <Item key={contact.id} onClick={() => handleNewChat(contact)}>
-              <Avatar alt="Avatar do contato" />
+              <Avatar url={contact.avatarUrl} alt="Avatar do contato" />
               <Name>{contact.name}</Name>
             </Item>
           ))}

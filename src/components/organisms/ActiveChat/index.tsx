@@ -1,4 +1,4 @@
-import EmojiPicker, { EmojiClickData } from 'emoji-picker-react';
+import EmojiPicker, { EmojiClickData, Theme } from 'emoji-picker-react';
 import { FC, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import socketIoClient from 'socket.io-client';
@@ -17,6 +17,7 @@ export const ActiveChat: FC = () => {
   const { activeContact } = useSelector((state: RootState) => state.contact);
   const { id } = useSelector((state: RootState) => state.user);
   const messages = useSelector((state: RootState) => state.message.data);
+  const { theme } = useSelector((state: RootState) => state.theme);
 
   const [showEmoji, setShowEmoji] = useState(false);
   const [message, setMessage] = useState('');
@@ -55,7 +56,11 @@ export const ActiveChat: FC = () => {
 
   return (
     <Container>
-      <Header showButton={false} name={activeContact?.name} />
+      <Header
+        showButton={false}
+        name={activeContact?.name}
+        avatarUrl={activeContact?.avatarUrl}
+      />
       <ChatBody>
         {messages.map((message) => (
           <Message key={message.id} message={message} userId={id} />
@@ -66,6 +71,7 @@ export const ActiveChat: FC = () => {
           width="100%"
           previewConfig={{ showPreview: false }}
           onEmojiClick={handleEmojiClick}
+          theme={theme === 'light' ? Theme.LIGHT : Theme.DARK}
         />
       </EmojiWrapper>
       <ChatFooter

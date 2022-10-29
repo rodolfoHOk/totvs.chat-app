@@ -19,9 +19,10 @@ export const Intro: FC = () => {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [avatarUrl, setAvatarUrl] = useState('');
 
   const handleCreate = () => {
-    dispatch(createUserRequest({ name }));
+    dispatch(createUserRequest({ name, avatarUrl }));
   };
 
   useEffect(() => {
@@ -57,6 +58,12 @@ export const Intro: FC = () => {
               placeholder="Qual é o seu e-mail?"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+            />
+            <Input
+              type="text"
+              placeholder="Qual a url do seu avatar?"
+              value={avatarUrl}
+              onChange={(e) => setAvatarUrl(e.target.value)}
             />
           </FormWrapper>
           <Button onClick={handleCreate}>Cadastrar</Button>

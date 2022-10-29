@@ -20,7 +20,7 @@ interface ContactProps {
 export const Contact: FC<ContactProps> = ({ contact, handleContactClick }) => {
   return (
     <Container onClick={() => handleContactClick(contact)}>
-      <Avatar alt="Avatar do contato" />
+      <Avatar url={contact.avatarUrl} alt="Avatar do contato" />
       <ContentWrapper>
         <Line>
           <Name>{contact.name}</Name>

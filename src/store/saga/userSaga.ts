@@ -10,6 +10,7 @@ import {
 
 export interface ContactDto {
   name: string;
+  avatarUrl: string;
 }
 
 export function* createUser(action: PayloadAction<ContactDto>) {

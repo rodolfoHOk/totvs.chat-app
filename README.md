@@ -23,6 +23,32 @@
 - @reduxjs/toolkit
 - socket.io-client
 
+## Imagens do projeto
+
+- <img src="https://raw.githubusercontent.com/rodolfoHOk/portfolio-img/main/images/totvs-chat-01.png" alt="Totvs Chat Imagem 01" width="450"/>
+
+- <img src="https://raw.githubusercontent.com/rodolfoHOk/portfolio-img/main/images/totvs-chat-02.png" alt="Totvs Chat Imagem 02" width="450"/>
+
+- <img src="https://raw.githubusercontent.com/rodolfoHOk/portfolio-img/main/images/totvs-chat-03.png" alt="Totvs Chat Imagem 03" width="450"/>
+
+- <img src="https://raw.githubusercontent.com/rodolfoHOk/portfolio-img/main/images/totvs-chat-04.png" alt="Totvs Chat Imagem 04" width="450"/>
+
+- <img src="https://raw.githubusercontent.com/rodolfoHOk/portfolio-img/main/images/totvs-chat-05.png" alt="Totvs Chat Imagem 05" width="450"/>
+
+- <img src="https://raw.githubusercontent.com/rodolfoHOk/portfolio-img/main/images/totvs-chat-06.png" alt="Totvs Chat Imagem 06" width="450"/>
+
+- <img src="https://raw.githubusercontent.com/rodolfoHOk/portfolio-img/main/images/totvs-chat-07.png" alt="Totvs Chat Imagem 07" width="450"/>
+
+- <img src="https://raw.githubusercontent.com/rodolfoHOk/portfolio-img/main/images/totvs-chat-08.png" alt="Totvs Chat Imagem 08" width="450"/>
+
+- <img src="https://raw.githubusercontent.com/rodolfoHOk/portfolio-img/main/images/totvs-chat-09.png" alt="Totvs Chat Imagem 09" width="450"/>
+
+- <img src="https://raw.githubusercontent.com/rodolfoHOk/portfolio-img/main/images/totvs-chat-10.png" alt="Totvs Chat Imagem 10" width="450"/>
+
+## Repositório do Back-End
+
+- https://github.com/rodolfoHOk/totvs.chat-api
+
 ## Guia Redux e Redux-Saga
 
 - Criar a store com @reduxjs-toolkit (src/store/index.ts)
